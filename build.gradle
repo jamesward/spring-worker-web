@@ -44,6 +44,11 @@ allprojects {
 
 springBoot {
     mainClass = 'com.example.WebApp'
+    layout = 'ZIP'
+}
+
+bootRepackage {
+    mainClass = 'org.springframework.boot.loader.PropertiesLauncher'
 }
 
 atom {

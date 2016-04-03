@@ -1,2 +1,2 @@
-web: java -Dserver.port=$PORT -jar build/libs/spring-worker-web.jar
-worker: java -Dapp.url=$APP_URL -classpath build/libs/spring-worker-web.jar com.example.WebApp
+web: java -Dserver.port=$PORT -Dloader.main=com.example.WebApp -jar spring-worker-web.jar
+worker: java -Dapp.url=$APP_URL -Dloader.main=com.example.FakeStockApp -jar spring-worker-web.jar
